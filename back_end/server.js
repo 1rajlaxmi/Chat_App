@@ -22,6 +22,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
   credentials: true // If you want to allow cookies or authorization headers
 }));
+app.options('*', cors());
 
 app.use(express.json());
 app.use(cookieParser());
