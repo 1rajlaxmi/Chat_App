@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000
 dotenv.config();
 
 app.use(cors({
-    origin: "https://chitchatraj.vercel.app", // Replace with frontend's origin
+    origin: '*', // Replace with frontend's origin
     credentials: true, // Allow cookies to be sent with requests
 }));
 
