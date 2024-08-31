@@ -17,8 +17,10 @@ const PORT = process.env.PORT || 5000
 dotenv.config();
 
 app.use(cors({
-    origin: '*', // Replace with frontend's origin
-    credentials: true, // Allow cookies to be sent with requests
+  origin: '*', // Allows requests from any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow specific methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  credentials: true // If you want to allow cookies or authorization headers
 }));
 
 app.use(express.json());
