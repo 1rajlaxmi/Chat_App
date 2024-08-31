@@ -28,6 +28,9 @@ app.use("/api/auth", authRoutes)
 app.use("/api/msg", msgRoutes)
 app.use("/api/users", userRoutes);
 
+app.get("/",(req,res)=>{
+    res.send("Everything is fine");
+})
 
 server.listen(PORT, () => {
 	connectMongodb();
